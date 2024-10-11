@@ -3,12 +3,12 @@ export class UserId {
 
   constructor(value: string) {
     this.value = value;
-    this.ensureIsValid();
+    this.ensureIsValid();   /*método ensureIsValid para validar si el valor cumple con ciertas condiciones.*/
   }
 
   private ensureIsValid() {
     if (this.value.length < 5) {
-      throw new Error("UserId must be at least 5 characters long");
+      throw new Error("UserId debe tener al menos 5 caracteres");
     }
   }
 }

@@ -7,8 +7,8 @@ export class UserCreatedAt {
   }
 
   private ensureIsValid() {
-    if (this.value > new Date()) {
-      throw new Error("UserCreatedAt must be in the past");
+    if (this.value > new Date()) {     /*Si la fecha de creación es mayor que la fecha actual*/
+      throw new Error("UserCreatedAt esta en el pasado");
     }
   }
 }

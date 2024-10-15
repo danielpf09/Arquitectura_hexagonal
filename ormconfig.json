@@ -1,0 +1,13 @@
+{
+    "type": "mongodb",
+    "url": "mongodb+srv://subasta:gKvrQgHgzP4._jb@cluster0.5zkftz0.mongodb.net/subastadb",
+    "useNewUrlParser": true,
+    "useUnifiedTopology": true,
+    "synchronize": true,
+    "logging": false,
+    "cli": {
+        "entitiesDir": "src/entity",
+        "migrationsDir": "src/migration",
+        "subscribersDir": "src/subscriber"
+    }
+}

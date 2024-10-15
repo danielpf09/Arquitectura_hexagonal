@@ -14,13 +14,16 @@ export class UserEdit {
     email: string,
     createdAt: Date
   ): Promise<void> {
+    // Crea una nueva instancia de "User" con los datos modificados
+    //Se piden los datos
     const user = new User(
-      new UserId(id),
-      new UserName(name),
-      new UserEmail(email),
-      new UserCreatedAt(createdAt)
+      new UserId(id),          // El ID del usuario existente
+      new UserName(name),      // El nuevo nombre del usuario
+      new UserEmail(email),    // El nuevo correo electrónico
+      new UserCreatedAt(createdAt)  // La nueva fecha de creación
     );
 
+    // Actualiza al usuario en la base de datos mediante el repositorio
     return this.repository.edit(user);
   }
 }
